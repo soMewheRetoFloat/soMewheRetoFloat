@@ -17,14 +17,11 @@
 [![My Skills](https://skillicons.dev/icons?i=linux,git,md)](https://skillicons.dev)
 ### AI Coding
 [![My Skills](https://skillicons.dev/icons?i=pytorch,tensorflow)](https://skillicons.dev)
-
 ### Software Engineering
 [![My Skills](https://skillicons.dev/icons?i=django,sqlite)](https://skillicons.dev)
 [![My Skills](https://skillicons.dev/icons?i=react,js,ts,nextjs,nodejs)](https://skillicons.dev)
-
 ### Game Development
 [![My Skills](https://skillicons.dev/icons?i=unity,unreal)](https://skillicons.dev)
-
 ### Others
 [![My Skills](https://skillicons.dev/icons?i=pr,au,ps)](https://skillicons.dev)
 
