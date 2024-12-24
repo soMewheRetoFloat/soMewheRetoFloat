@@ -1,4 +1,4 @@
-# Hi there 你好 👋
+# Hi there 👋 你好🦆
 <p align="center">
     <img src="https://github.com/soMewheRetoFloat/soMewheRetoFloat/blob/main/azusa.gif" alt="azusa">
 </p>
