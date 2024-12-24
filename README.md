@@ -12,10 +12,11 @@
 
 <h1 align="center">- Tech Stack -</h1>
 
-![cpp](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=react&animation=spin&svgfill=15d8fe)
+![cpp](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=cpp)
 
-![python](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=react&animation=spin&svgfill=15d8fe)
+![python](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=python)
 
+![react](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=react&animation=spin)
 
 
 
