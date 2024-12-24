@@ -27,10 +27,8 @@
 [![My Skills](https://skillicons.dev/icons?i=pr,au,ps)](https://skillicons.dev)
 
 <h1 align="center">- Statistics -</h1>
-  
-[![Fl0at9973's GitHub stats](https://github.com/anuraghazra/github-readme-stats/github-readme-stats.vercel.app/api?username=soMewheRetoFloat)
 
-
+[![Fl0at9973's GitHub stats](https://github-readme-stats.vercel.app/api?username=soMewheRetoFloat&theme=vue)](https://github.com/anuraghazra/github-readme-stats)
 
 
 <h1 align="center">- Contact -</h1>
