@@ -28,13 +28,9 @@
 
 <h1 align="center">- Statistics -</h1>
 
-<p align="center">
+[![Fl0at9973's GitHub stats](https://github-readme-stats.vercel.app/api?username=soMewheRetoFloat)](https://github.com/anuraghazra/github-readme-stats)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=soMewheRetoFloat)
 
-[![Fl0at9973's GitHub stats](https://github-readme-stats.vercel.app/api?username=soMewheRetoFloat&theme=vue)](https://github.com/anuraghazra/github-readme-stats)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=soMewheRetoFloat&hide_progress=true)
-
-</p>
 
 <h1 align="center">- Contact -</h1>
 
