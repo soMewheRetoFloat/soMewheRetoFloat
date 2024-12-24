@@ -18,17 +18,26 @@
 [![My Skills](https://skillicons.dev/icons?i=linux,git,md)](https://skillicons.dev)
 ### AI Coding
 [![My Skills](https://skillicons.dev/icons?i=pytorch,tensorflow)](https://skillicons.dev)
-
 ### Software Engineering
 [![My Skills](https://skillicons.dev/icons?i=django,sqlite)](https://skillicons.dev)
 [![My Skills](https://skillicons.dev/icons?i=react,js,ts,nextjs,nodejs)](https://skillicons.dev)
-
 ### Game Development
 [![My Skills](https://skillicons.dev/icons?i=unity,unreal)](https://skillicons.dev)
-
 ### Others
 [![My Skills](https://skillicons.dev/icons?i=pr,au,ps)](https://skillicons.dev)
 
+<h1 align="center">- Statistics -</h1>
+
+<details>
+    <summary>Click here to expand</summary>
+    
+ [![Fl0at9973's GitHub stats](https://github.com/anuraghazra/github-readme-stats/github-readme-stats.vercel.app/api?username=soMewheRetoFloat&theme=vue)
+
+</details>
+
+
+
+<h1 align="center">- Contact -</h1>
 
 
 
