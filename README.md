@@ -28,8 +28,11 @@
 
 <h1 align="center">- Statistics -</h1>
 
+<p align="center">
+
 [![Fl0at9973's GitHub stats](https://github-readme-stats.vercel.app/api?username=soMewheRetoFloat&theme=vue)](https://github.com/anuraghazra/github-readme-stats)
 
+</p>
 
 <h1 align="center">- Contact -</h1>
 
