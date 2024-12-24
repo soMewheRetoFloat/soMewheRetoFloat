@@ -33,5 +33,6 @@
 -->
 
 <h1 align="center">- Contact -</h1>
-
+<a href="mailto:zihangzhan2003@gmail.com">
 <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+</a>
