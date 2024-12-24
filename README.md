@@ -10,14 +10,22 @@
 * 🧐 Still mining self-interested area to pursue.
 * 🎓 Considering continuing study for MS.
 
-<h1 align="center">- Tech Stack -</h1>
+<h1 align="center">- Skills -</h1>
 
-![cpp](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=cplusplus)
+* Basic:
+[![My Skills](https://skillicons.dev/icons?i=cpp, c#, python, linux, git)](https://skillicons.dev)
 
-![python](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=python)
+* AI Coding:
+[![My Skills](https://skillicons.dev/icons?i=pytorch, tensorflow)](https://skillicons.dev)
 
-![react](https://readme-components.vercel.app/api?component=logo&fill=linear-gradient%2862deg%2C%20%238EC5FC%200%25%2C%20%23E0C3FC%20100%25%29%3B%0A&logo=react&animation=spin)
+* Software Engineering:
+[![My Skills](https://skillicons.dev/icons?i=django, react, js, ts)](https://skillicons.dev)
 
+* Game Development:
+[![My Skills](https://skillicons.dev/icons?i=unity, unreal)](https://skillicons.dev)
+
+* Others:
+[![My Skills](https://skillicons.dev/icons?i=pr, au)](https://skillicons.dev)
 
 
 
