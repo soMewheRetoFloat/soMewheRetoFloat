@@ -12,25 +12,20 @@
 
 <h1 align="center">- Skills -</h1>
 
-## Basic
-[![My Skills](https://skillicons.dev/icons?i=cpp,cs,python,java,linux,git,md)](https://skillicons.dev)
-
-## AI Coding
+### Basic
+[![My Skills](https://skillicons.dev/icons?i=cpp,cs,python,java)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=linux,git,md)](https://skillicons.dev)
+### AI Coding
 [![My Skills](https://skillicons.dev/icons?i=pytorch,tensorflow)](https://skillicons.dev)
 
-## Software Engineering
-
-### Backend
+### Software Engineering
 [![My Skills](https://skillicons.dev/icons?i=django,sqlite)](https://skillicons.dev)
-
-### Frontend
-
 [![My Skills](https://skillicons.dev/icons?i=react,js,ts,nextjs,nodejs)](https://skillicons.dev)
 
-## Game Development
+### Game Development
 [![My Skills](https://skillicons.dev/icons?i=unity,unreal)](https://skillicons.dev)
 
-## Others
+### Others
 [![My Skills](https://skillicons.dev/icons?i=pr,au,ps)](https://skillicons.dev)
 
 
