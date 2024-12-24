@@ -26,11 +26,11 @@
 ### Others
 [![My Skills](https://skillicons.dev/icons?i=pr,au,ps)](https://skillicons.dev)
 
+<!--
 <h1 align="center">- Statistics -</h1>
-
 [![Fl0at9973's GitHub stats](https://github-readme-stats.vercel.app/api?username=soMewheRetoFloat)](https://github.com/anuraghazra/github-readme-stats)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=soMewheRetoFloat)
-
+-->
 
 <h1 align="center">- Contact -</h1>
 
