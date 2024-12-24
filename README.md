@@ -1,4 +1,5 @@
-# Hi there 👋 ⚡🐒🦆
+# Hi there 👋 
+# 🌩🐒🦆
 <p align="center">
     <img src="https://github.com/soMewheRetoFloat/soMewheRetoFloat/blob/main/azusa.gif" alt="azusa">
 </p>
