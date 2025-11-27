@@ -1,4 +1,4 @@
-## Hi there 👋 | 你好呀 🌩🐒🦆 | Здравствуйте 🍞
+## Hi there 👋 | 你好呀 🌩🐒🦆 | Здравствуйте 🍞 | こんにちは！🐕
 ## Here's Zihang Zhan (Fl0at9973)
 <p align="center">
     <img src="https://github.com/soMewheRetoFloat/soMewheRetoFloat/blob/main/azusa.gif" alt="azusa">
@@ -6,10 +6,10 @@
 
 <h1 align="center">- Introduction -</h1>
 
-* 💻 A junior in [Tsinghua University](https://www.tsinghua.edu.cn/index.htm).
+* 💻 A senior in [Tsinghua University](https://www.tsinghua.edu.cn/index.htm).
 * ✍🏻 Major in [Computer Science and Technology](https://www.cs.tsinghua.edu.cn/).
 * 🧐 Still mining self-interested area to pursue.
-* 🎓 Considering continuing study for MS.
+* 🎓 About to pursue a master degree at [Institute for Network Sciences and Cyberspace, THU](https://www.insc.tsinghua.edu.cn/).
 
 <h1 align="center">- Skills -</h1>
 
