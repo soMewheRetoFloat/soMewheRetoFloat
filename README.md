@@ -8,7 +8,7 @@
 
 * 💻 A senior in [Tsinghua University](https://www.tsinghua.edu.cn/index.htm).
 * ✍🏻 Major in [Computer Science and Technology](https://www.cs.tsinghua.edu.cn/).
-* 🧐 Still mining self-interested area to pursue.
+* 🧐 Investigating in Cybersecurity.
 * 🎓 About to pursue a master degree at [Institute for Network Sciences and Cyberspace, THU](https://www.insc.tsinghua.edu.cn/).
 
 <h1 align="center">- Skills -</h1>
