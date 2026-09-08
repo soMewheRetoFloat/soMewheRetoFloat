@@ -6,10 +6,9 @@
 
 <h1 align="center">- Introduction -</h1>
 
-* 💻 A senior in [Tsinghua University](https://www.tsinghua.edu.cn/index.htm).
-* ✍🏻 Major in [Computer Science and Technology](https://www.cs.tsinghua.edu.cn/).
-* 🧐 Investigating in Cybersecurity.
-* 🎓 About to pursue a master degree at [Institute for Network Sciences and Cyberspace, THU](https://www.insc.tsinghua.edu.cn/).
+* 💻 Graduated as B.E and pursuing my M.E. in Tsinghua University.
+* ✍🏻 Major in Computer Science and Technology.
+* 🧐 Investigating in Embodied Intelligence.
 
 <h1 align="center">- Skills -</h1>
 
