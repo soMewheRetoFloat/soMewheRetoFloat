@@ -117,6 +117,14 @@ def namespace_svg(source, name):
     animations = {}
     for style in root.findall(".//svg:style", NS):
         rules = tinycss2.parse_stylesheet(style.text or "", skip_comments=False, skip_whitespace=False)
+        for rule in rules:
+            if rule.type == "qualified-rule":
+                selector = [token for token in rule.prelude if token.type not in ("whitespace", "comment")]
+                if len(selector) == 1 and selector[0].type == "hash" and selector[0].value == source.get("id"):
+                    declarations = tinycss2.parse_declaration_list(rule.content, skip_comments=False, skip_whitespace=False)
+                    layout = {"position", "top", "right", "bottom", "left", "width", "height", "transform"}
+                    declarations = [declaration for declaration in declarations if declaration.type != "declaration" or declaration.lower_name not in layout]
+                    rule.content = tinycss2.parse_component_value_list(tinycss2.serialize(declarations))
         stylesheets.append((style, rules))
         for rule in rules:
             if rule.type == "at-rule" and rule.lower_at_keyword.endswith("keyframes"):
@@ -155,6 +163,7 @@ def add_source(panel, name, x, y, width, height):
     source.set("width", str(width))
     source.set("height", str(height))
     source.set("preserveAspectRatio", "xMidYMid meet")
+    source.set("overflow", "hidden")
     group.append(source)
     return animation_count
 

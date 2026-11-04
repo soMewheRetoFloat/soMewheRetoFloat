@@ -4,7 +4,7 @@
   <desc>Five animated technology icons above sixteen static icons, on a dark background.</desc>
   <rect x="1" y="1" width="1198" height="442" rx="24" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
   <g id="item-python">
-    <svg viewBox="-30 -4 570 521" id="python-py-icon" x="105" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="-30 -4 570 521" id="python-py-icon" x="105" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet" overflow="hidden">
   <style>
     @keyframes python-first {
       0% {
@@ -59,7 +59,7 @@
   </g>
   <text x="160" y="166" fill="#e6edf3" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="middle">Python</text>
   <g id="item-js">
-    <svg viewBox="0 0 100 100" id="js-js-icon" x="325" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 100 100" id="js-js-icon" x="325" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet" overflow="hidden">
       <defs>
         <style>
           @keyframes js-stopper-ani {
@@ -103,12 +103,12 @@
           }
 
           #item-js #js-js-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100px;
-            height: 100px;
+            
+            
+            
+            
+            
+            
           }
           #item-js .js-js-cup {
             fill: transparent;
@@ -150,7 +150,7 @@
   </g>
   <text x="380" y="166" fill="#e6edf3" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="middle">JavaScript</text>
   <g id="item-ts">
-    <svg viewBox="0 0 100 100" id="ts-js-icon" x="545" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 100 100" id="ts-js-icon" x="545" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet" overflow="hidden">
       <defs>
         <style>
           @keyframes ts-stopper-ani {
@@ -194,12 +194,12 @@
           }
 
           #item-ts #ts-js-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100px;
-            height: 100px;
+            
+            
+            
+            
+            
+            
           }
           #item-ts .ts-js-cup {
             fill: transparent;
@@ -241,7 +241,7 @@
   </g>
   <text x="600" y="166" fill="#e6edf3" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="middle">TypeScript</text>
   <g id="item-react">
-    <svg viewBox="0 0 100 100" id="react-react-icon" x="765" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 100 100" id="react-react-icon" x="765" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet" overflow="hidden">
   <!-- 1분 코딩 참고 -->
   <def>
     <style>
@@ -257,12 +257,12 @@
         }
       }
       #item-react #react-react-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
+        
+        
+        
+        
+        
+        
       }
       #item-react .react-react-ellipse {
         fill: none;
@@ -294,7 +294,7 @@
   </g>
   <text x="820" y="166" fill="#e6edf3" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="middle">React</text>
   <g id="item-cpp">
-    <svg viewBox="0 20 100 60" id="cpp-cpp-icon" x="985" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 20 100 60" id="cpp-cpp-icon" x="985" y="32" width="110" height="110" preserveAspectRatio="xMidYMid meet" overflow="hidden">
   <defs>
     <style>
       @keyframes cpp-plus-1-rotate {
@@ -332,12 +332,12 @@
         }
       }
       #item-cpp #cpp-cpp-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100px;
-        height: 100px;
+        
+        
+        
+        
+        
+        
       }
       #item-cpp .cpp-cpp-arc {
         stroke: #6195CB; 
@@ -374,7 +374,7 @@
   <text x="1040" y="166" fill="#e6edf3" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="500" text-anchor="middle">C++</text>
   <line x1="40" y1="188" x2="1160" y2="188" stroke="#30363d" stroke-width="1"/>
   <g id="item-static">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="880" height="208" viewBox="0 0 2356 556" fill="none" version="1.1" x="160" y="212" preserveAspectRatio="xMidYMid meet">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="880" height="208" viewBox="0 0 2356 556" fill="none" version="1.1" x="160" y="212" preserveAspectRatio="xMidYMid meet" overflow="hidden">
     
         <g transform="translate(0, 0)">
           <svg width="256" height="256" fill="none" viewBox="0 0 256 256"><rect width="256" height="256" fill="#953CAD" rx="60"/><path fill="#fff" d="M195.436 100.668V114.142H208.91V100.668H215.647V114.142H229.12V120.879H215.647V134.352H229.12V141.089H215.647V154.563H208.91V141.089H195.436V154.563H188.699V141.089H175.226V134.352H188.699V120.879H175.226V114.142H188.699V100.668H195.436ZM208.91 120.879H195.436V134.352H208.91V120.879Z"/><path fill="#fff" d="M122.001 33C157.144 33 187.828 52.0863 204.262 80.4561L204.102 80.183L162.753 103.991C154.607 90.1977 139.672 80.8892 122.54 80.6975L122.001 80.6945C95.875 80.6945 74.6945 101.874 74.6945 127.999C74.6945 136.543 76.9723 144.552 80.9335 151.469C89.0876 165.704 104.416 175.306 122.001 175.306C139.693 175.306 155.109 165.582 163.222 151.195L163.025 151.54L204.311 175.458C188.057 203.588 157.794 222.615 123.059 222.994L122.001 223C86.746 223 55.9753 203.796 39.582 175.276C31.5791 161.353 27 145.212 27 127.999C27 75.5334 69.5323 33 122.001 33Z"/></svg>
