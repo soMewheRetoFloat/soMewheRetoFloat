@@ -16,41 +16,39 @@
 
 ### 👋 About Me
 
-- 🎓 I earned my B.E. at Tsinghua University and am pursuing my M.E. there.
-- 💻 My major is Computer Science and Technology.
-- 🧐 My research focuses on Embodied Intelligence.
+* 💻 Graduated as B.E and pursuing my M.E. in Tsinghua University.
+* ✍🏻 Major in Computer Science and Technology.
+* 🧐 Investigating in Embodied Intelligence.
 
-### 🧰 Skills
+### 📊 WakaTime
 
-**Basic**
+<!-- WAKATIME:START -->
+*Coding activity will appear here once WakaTime is connected.*
+<!-- WAKATIME:END -->
 
-<img src="https://skillicons.dev/icons?i=cpp,cs,python,java,linux,git,md&amp;perline=7" alt="C++, C#, Python, Java, Linux, Git, Markdown" />
+### 🧰 Tech Stack
 
-**AI Coding**
-
-<img src="https://skillicons.dev/icons?i=pytorch,tensorflow" alt="PyTorch, TensorFlow" />
-
-**Software Engineering**
-
-<img src="https://skillicons.dev/icons?i=django,sqlite,react,js,ts,nextjs,nodejs&amp;perline=7" alt="Django, SQLite, React, JavaScript, TypeScript, Next.js, Node.js" />
-
-**Game Development**
-
-<img src="https://skillicons.dev/icons?i=unity,unreal" alt="Unity, Unreal Engine" />
-
-**Others**
-
-<img src="https://skillicons.dev/icons?i=pr,au,ps" alt="Adobe Premiere Pro, Adobe Audition, Adobe Photoshop" />
-
-### 📈 Contribution Footprint
-
-<p align="center">
-  <img src="assets/images/github-footprint.svg" width="100%" alt="GitHub contribution calendar, contribution types, and languages of recently contributed public repositories for soMewheRetoFloat" />
+<p>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&amp;logoColor=fff&amp;style=flat" />
+  <img alt="C++" src="https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&amp;logoColor=fff&amp;style=flat" />
+  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&amp;logoColor=fff&amp;style=flat" />
+  <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&amp;logoColor=fff&amp;style=flat" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&amp;logoColor=fff&amp;style=flat" />
+  <img alt="React" src="https://img.shields.io/badge/React-61DAFB?logo=react&amp;logoColor=000&amp;style=flat" />
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?logo=linux&amp;logoColor=000&amp;style=flat" />
+  <img alt="Git" src="https://img.shields.io/badge/Git-F05032?logo=git&amp;logoColor=fff&amp;style=flat" />
 </p>
 
 <p align="center">
-  Contributions cover the last 365 completed UTC days.<br />
-  Repository totals, stars, forks, and language counts describe recently contributed public repositories.
+  <img src="https://skillicons.dev/icons?i=cpp,cs,python,java,linux,git,md,pytorch,tensorflow,django,sqlite,react,js,ts,nextjs,nodejs,unity,unreal,pr,au,ps&amp;perline=11" alt="C++, C#, Python, Java, Linux, Git, Markdown, PyTorch, TensorFlow, Django, SQLite, React, JavaScript, TypeScript, Next.js, Node.js, Unity, Unreal Engine, Adobe Premiere Pro, Adobe Audition, Adobe Photoshop" />
+</p>
+
+<p align="center">
+  <img src="https://techstack-generator.vercel.app/python-icon.svg" width="58" alt="Python" />
+  <img src="https://techstack-generator.vercel.app/js-icon.svg" width="58" alt="JavaScript" />
+  <img src="https://techstack-generator.vercel.app/ts-icon.svg" width="58" alt="TypeScript" />
+  <img src="https://techstack-generator.vercel.app/react-icon.svg" width="58" alt="React" />
+  <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="58" alt="C++" />
 </p>
 
 ### ✉️ Contact

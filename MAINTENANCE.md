@@ -1,47 +1,53 @@
 # Profile 维护说明
 
-`README.md` 保存个人介绍、教育经历、研究方向、技能分组与联系方式。`azusa.gif` 保留原始文件。
+`README.md` 保存原始 About Me、WakaTime、Tech Stack 与联系方式。`azusa.gif` 保留原始文件。
 
-## Contribution Footprint
+## WakaTime
 
-- `scripts/update_profile.py` 使用 GitHub GraphQL API 读取 `soMewheRetoFloat` 的真实数据。
-- `scripts/render_footprint.py` 使用 `svgwrite` 绘制贡献图。
-- `data/profile-data.json` 保存本次查询取得的数据。
-- `assets/images/github-footprint.svg` 是 README 引用的图表。
-- `scripts/validate_profile.py` 检查日期、数值、SVG 结构、文字边界及重复生成的一致性。
+- `scripts/update_wakatime.py` 使用 WakaTime API 读取本人最近七天的统计。
+- `data/wakatime.json` 在成功获取数据后生成，保存语言、编辑器、操作系统和统计时间范围。
+- README 中 `WAKATIME:START` 与 `WAKATIME:END` 之间的内容由程序更新。
+- `scripts/check_profile.py` 检查 Markdown、图片引用、栏目、工作流与已获取的数据。
 
-贡献日历与贡献类型覆盖最近 365 个完整 UTC 日期。雷达图使用 `log10(count + 1)` 刻度，并标注原始计数，其中 Repositories 表示该时期创建的仓库数量。日历总数采用 GitHub 返回值，其中可能包含用户已经选择公开展示的匿名私有贡献数量。
+语言和编辑器各显示用时最多的五项，操作系统显示前三项。用时及百分比采用 WakaTime 返回值。起止日期按照 API 返回的时区显示，总用时包含 `Other`。
 
-参与仓库来自 `repositoriesContributedTo`，查询条件为公开仓库、COMMIT 贡献、包含本人仓库，并遍历全部分页。GitHub 将这项查询定义为近期参与，未提供固定起止日期。Stars 和 Forks 是这些仓库的当前合计数；语言分布按照每个仓库的主要语言统计仓库数量。
+## 连接账号
+
+1. 安装 WakaTime for Mac 或实际使用的编辑器插件，在应用中配置本人的 WakaTime API Key。
+2. 在 WakaTime 的个人 OAuth 页面创建具有 `read_stats` 权限的 token。
+3. 打开本仓库的 `Settings → Secrets and variables → Actions → New repository secret`，名称填写 `WAKATIME_TOKEN`，值填写该 OAuth token。
+4. 在 `Actions → Update WakaTime Profile → Run workflow` 运行一次。
+
+本机插件使用 API Key 上传活动；读取个人统计使用 OAuth token。工作流在尚未连接账号时仅检查页面结构，并在运行记录中说明连接状态。配置 token 后，后续运行将读取真实数据。
 
 ## GitHub Actions
 
-`.github/workflows/profile-data.yml` 每天在 UTC 18:17 运行，即日本时间次日 03:17、北京时间次日 02:17。GitHub 的计划运行可能排队。工作流支持手动运行，更新生成代码、依赖或工作流文件时也会运行。
+`.github/workflows/profile-data.yml` 每天在 UTC 18:17 运行，即日本时间次日 03:17、北京时间次日 02:17。GitHub 的计划运行可能排队。工作流支持手动运行，更新 README、生成代码、依赖或工作流文件时也会运行。
 
-工作流使用 GitHub 自带的 `GITHUB_TOKEN`，需要 `contents: write` 权限以提交生成文件。数据获取与验证全部成功后，仅提交 SVG 和数据文件。HTTP 请求失败、GraphQL 报错或校验失败时，程序立即终止。
+GitHub 自带的 `GITHUB_TOKEN` 使用 `contents: write` 权限提交 README 和统计数据。WakaTime token 通过 Actions secret 注入。HTTP 请求失败、统计尚在计算或数据校验失败时，程序立即终止。
 
 ## 本地运行
 
-使用 Python 3.12 或更新版本，并安装 `requirements.txt` 中的依赖。本机优先使用 conda 的 `codex` 环境。`GH_TOKEN` 由调用环境提供。
+使用 Python 3.12 或更新版本，并安装 `requirements.txt` 中的依赖。本机优先使用 conda 的 `codex` 环境。`WAKATIME_TOKEN` 由调用环境提供。
 
 ```sh
 python -m pip install -r requirements.txt
-python scripts/update_profile.py
-python scripts/validate_profile.py
+python scripts/update_wakatime.py
+python scripts/check_profile.py
 ```
 
-使用仓库中保存的真实数据重新生成图片：
+使用成功获取的数据重新生成 WakaTime 内容：
 
 ```sh
-python scripts/update_profile.py --from-data data/profile-data.json
-python scripts/validate_profile.py
+python scripts/update_wakatime.py --from-data data/wakatime.json
+python scripts/check_profile.py
 ```
 
 `.build/` 与 `.work/` 保存检查结果和本地依赖，已被 `.gitignore` 忽略。
 
 ## 设计与数据来源
 
-- 页面栏目组织与 Contribution Footprint 展示形式参考 [Xiao-ao-jiang-hu 的 profile](https://github.com/Xiao-ao-jiang-hu/Xiao-ao-jiang-hu)。
+- 页面栏目与 Tech Stack 展示形式参考 [Xiao-ao-jiang-hu 的 profile](https://github.com/Xiao-ao-jiang-hu/Xiao-ao-jiang-hu)。
 - 个人内容来自本仓库原有 README。
-- 技能图标由 Skill Icons 提供，联系徽章由 Shields.io 提供。
-- 贡献图使用本仓库的生成程序和 GitHub GraphQL API 数据。
+- 徽章由 Shields.io 提供，图标由 Skill Icons 和 techstack-generator 提供。
+- WakaTime 内容使用本人的语言、编辑器和操作系统统计。
