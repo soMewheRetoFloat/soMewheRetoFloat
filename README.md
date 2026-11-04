@@ -1,37 +1,60 @@
-## Hi there 👋 | 你好呀 🌩🐒🦆 | Здравствуйте 🍞 | こんにちは！🐕
-## Here's Zihang Zhan (Fl0at9973)
-<p align="center">
-    <img src="https://github.com/soMewheRetoFloat/soMewheRetoFloat/blob/main/azusa.gif" alt="azusa">
+<div align="center">
+
+# Zihang Zhan · Fl0at9973
+
+<p>Hi there 👋 · 你好呀 🌩🐒🦆 · Здравствуйте 🍞 · こんにちは！🐕</p>
+<p>Computer Science and Technology · Embodied Intelligence</p>
+
+<p>
+  <a href="https://github.com/soMewheRetoFloat">GitHub</a> ·
+  <a href="mailto:zihangzhan2003@gmail.com">Email</a>
 </p>
 
-<h1 align="center">- Introduction -</h1>
+<img src="azusa.gif" width="440" alt="Azusa animation" />
 
-* 💻 Graduated as B.E and pursuing my M.E. in Tsinghua University.
-* ✍🏻 Major in Computer Science and Technology.
-* 🧐 Investigating in Embodied Intelligence.
+</div>
 
-<h1 align="center">- Skills -</h1>
+### 👋 About Me
 
-### Basic
-[![My Skills](https://skillicons.dev/icons?i=cpp,cs,python,java)](https://skillicons.dev)
-[![My Skills](https://skillicons.dev/icons?i=linux,git,md)](https://skillicons.dev)
-### AI Coding
-[![My Skills](https://skillicons.dev/icons?i=pytorch,tensorflow)](https://skillicons.dev)
-### Software Engineering
-[![My Skills](https://skillicons.dev/icons?i=django,sqlite)](https://skillicons.dev)
-[![My Skills](https://skillicons.dev/icons?i=react,js,ts,nextjs,nodejs)](https://skillicons.dev)
-### Game Development
-[![My Skills](https://skillicons.dev/icons?i=unity,unreal)](https://skillicons.dev)
-### Others
-[![My Skills](https://skillicons.dev/icons?i=pr,au,ps)](https://skillicons.dev)
+- 🎓 I earned my B.E. at Tsinghua University and am pursuing my M.E. there.
+- 💻 My major is Computer Science and Technology.
+- 🧐 My research focuses on Embodied Intelligence.
 
-<!--
-<h1 align="center">- Statistics -</h1>
-[![Fl0at9973's GitHub stats](https://github-readme-stats.vercel.app/api?username=soMewheRetoFloat)](https://github.com/anuraghazra/github-readme-stats)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=soMewheRetoFloat)
--->
+### 🧰 Skills
 
-<h1 align="center">- Contact -</h1>
+**Basic**
+
+<img src="https://skillicons.dev/icons?i=cpp,cs,python,java,linux,git,md&amp;perline=7" alt="C++, C#, Python, Java, Linux, Git, Markdown" />
+
+**AI Coding**
+
+<img src="https://skillicons.dev/icons?i=pytorch,tensorflow" alt="PyTorch, TensorFlow" />
+
+**Software Engineering**
+
+<img src="https://skillicons.dev/icons?i=django,sqlite,react,js,ts,nextjs,nodejs&amp;perline=7" alt="Django, SQLite, React, JavaScript, TypeScript, Next.js, Node.js" />
+
+**Game Development**
+
+<img src="https://skillicons.dev/icons?i=unity,unreal" alt="Unity, Unreal Engine" />
+
+**Others**
+
+<img src="https://skillicons.dev/icons?i=pr,au,ps" alt="Adobe Premiere Pro, Adobe Audition, Adobe Photoshop" />
+
+### 📈 Contribution Footprint
+
+<p align="center">
+  <img src="assets/images/github-footprint.svg" width="100%" alt="GitHub contribution calendar, contribution types, and languages of recently contributed public repositories for soMewheRetoFloat" />
+</p>
+
+<p align="center">
+  Contributions cover the last 365 completed UTC days.<br />
+  Repository totals, stars, forks, and language counts describe recently contributed public repositories.
+</p>
+
+### ✉️ Contact
+
 <a href="mailto:zihangzhan2003@gmail.com">
-<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=flat&amp;logo=gmail&amp;logoColor=white" alt="Email Zihang Zhan" />
 </a>

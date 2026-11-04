@@ -1,0 +1,60 @@
+name: Update Contribution Footprint
+
+on:
+  schedule:
+    - cron: "17 18 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - "profile/**"
+    paths:
+      - ".github/workflows/profile-data.yml"
+      - "scripts/**"
+      - "requirements.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-data-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          clean: false
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Generate contribution footprint
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/update_profile.py
+
+      - name: Validate generated data and SVG
+        run: python scripts/validate_profile.py
+
+      - name: Commit generated files
+        run: |
+          git add -- assets/images/github-footprint.svg data/profile-data.json
+          if git diff --cached --quiet; then
+            echo "Contribution data is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update contribution footprint"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
