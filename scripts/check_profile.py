@@ -1,3 +1,4 @@
+import argparse
 import ast
 import json
 from pathlib import Path
@@ -14,6 +15,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Validate profile content and WakaTime statistics")
+    parser.add_argument("--structure-only", action="store_true")
+    args = parser.parse_args()
     for path in (ROOT / "scripts").glob("*.py"):
         ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
@@ -37,12 +41,12 @@ def main():
     if "schedule" not in workflow["on"] or "workflow_dispatch" not in workflow["on"]:
         raise ValueError("The workflow must support scheduled and manual updates")
     snapshot = ROOT / "data/wakatime.json"
-    if snapshot.is_file():
+    if snapshot.is_file() and not args.structure_only:
         data = json.loads(snapshot.read_text(encoding="utf-8"))
         if replace_section(readme, render_stats(data)) != readme:
             raise ValueError("README statistics do not match the WakaTime snapshot")
         print("WakaTime snapshot and displayed statistics verified")
-    else:
+    elif not snapshot.is_file():
         print("WakaTime connection is pending; no account statistics have been fetched")
     print("Profile Markdown, images, section structure and workflow configuration verified")
 
