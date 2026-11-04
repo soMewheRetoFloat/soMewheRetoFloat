@@ -23,7 +23,24 @@
 ### 📊 WakaTime
 
 <!-- WAKATIME:START -->
-*Coding activity will appear here once WakaTime is connected.*
+**This Week I Spent My Time On**
+
+🕑 Time Zone: Asia/Tokyo
+
+**💬 Programming Languages**
+
+No activity recorded in this period.
+
+**🔥 Editors**
+
+No activity recorded in this period.
+
+**💻 Operating Systems**
+
+No activity recorded in this period.
+
+Range: 2026-10-28 → 2026-11-03  
+Last 7 days total: 0 secs
 <!-- WAKATIME:END -->
 
 ### 🧰 Tech Stack
