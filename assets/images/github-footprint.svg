@@ -1174,11 +1174,11 @@
   <text fill="#edf3ff" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" lengthAdjust="spacingAndGlyphs" text-anchor="start" textLength="375.06000000000006" x="52" y="640">Languages across participated repositories</text>
   <text fill="#9aaec9" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" lengthAdjust="spacingAndGlyphs" text-anchor="start" textLength="196.8" x="52" y="663">Primary language · repository count</text>
   <circle cx="150" cy="749" fill="none" r="53" stroke="#25334a" stroke-width="23"/>
-  <circle cx="150" cy="749" fill="none" r="53" stroke="#8b949e" stroke-dasharray="(333.0088212805181, 0)" stroke-dashoffset="0" stroke-width="23" transform="rotate(-90 150 749)"/>
+  <circle cx="150" cy="749" fill="none" r="53" stroke="#3572A5" stroke-dasharray="(333.0088212805181, 0)" stroke-dashoffset="0" stroke-width="23" transform="rotate(-90 150 749)"/>
   <text fill="#edf3ff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" lengthAdjust="spacingAndGlyphs" text-anchor="middle" textLength="15.680000000000001" x="150" y="750">1</text>
   <text fill="#9aaec9" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" lengthAdjust="spacingAndGlyphs" text-anchor="middle" textLength="30.96" x="150" y="770">repos</text>
-  <rect fill="#8b949e" height="11" rx="3" width="11" x="250" y="697"/>
-  <text fill="#edf3ff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" lengthAdjust="spacingAndGlyphs" text-anchor="start" textLength="32.480000000000004" x="272" y="708">Other</text>
+  <rect fill="#3572A5" height="11" rx="3" width="11" x="250" y="697"/>
+  <text fill="#edf3ff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" lengthAdjust="spacingAndGlyphs" text-anchor="start" textLength="43.4" x="272" y="708">Python</text>
   <text fill="#9aaec9" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" lengthAdjust="spacingAndGlyphs" text-anchor="end" textLength="7.840000000000001" x="495" y="708">1</text>
   <text fill="#edf3ff" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" text-anchor="start" textLength="118.72" x="873" y="707">Repository metrics</text>
   <text fill="#9aaec9" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" lengthAdjust="spacingAndGlyphs" text-anchor="start" textLength="147.36" x="873" y="733">Recently contributed public</text>
