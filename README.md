@@ -16,8 +16,7 @@
 
 ### 👋 About Me
 
-* 💻 Graduated as B.E and pursuing my M.E. in Tsinghua University.
-* ✍🏻 Major in Computer Science and Technology.
+* 💻 Graduated as B.E of Computer Science and Technology and pursuing my M.E. of Electronic Information in Tsinghua University.
 * 🧐 Investigating in Embodied Intelligence.
 
 ### 📊 WakaTime
