@@ -1,12 +1,220 @@
 {
-  "range": "last_7_days",
-  "start": "2026-10-27T15:00:00Z",
-  "end": "2026-11-03T14:59:59Z",
+  "range": "last_7_days_including_today",
+  "start": "2026-10-28T15:00:00Z",
+  "end": "2026-11-04T14:59:59Z",
   "timezone": "Asia/Tokyo",
-  "is_including_today": false,
-  "total_seconds_including_other_language": 0.0,
-  "human_readable_total_including_other_language": "0 secs",
-  "languages": [],
-  "editors": [],
-  "operating_systems": []
+  "is_including_today": true,
+  "fetched_at": "2026-11-04T07:00:17.968794+00:00",
+  "total_seconds_including_other_language": 77190.854396,
+  "human_readable_total_including_other_language": "21 hrs 26 mins 31 secs",
+  "daily_totals": [
+    {
+      "date": "2026-10-29",
+      "total_seconds": 10563.578
+    },
+    {
+      "date": "2026-10-30",
+      "total_seconds": 5565.046
+    },
+    {
+      "date": "2026-10-31",
+      "total_seconds": 15740.596
+    },
+    {
+      "date": "2026-11-01",
+      "total_seconds": 23026.801
+    },
+    {
+      "date": "2026-11-02",
+      "total_seconds": 5899.789
+    },
+    {
+      "date": "2026-11-03",
+      "total_seconds": 10642.570155
+    },
+    {
+      "date": "2026-11-04",
+      "total_seconds": 5752.474241
+    }
+  ],
+  "languages": [
+    {
+      "name": "Python",
+      "total_seconds": 26722.87966,
+      "percent": 34.61923030791685,
+      "text": "7 hrs 25 mins 23 secs"
+    },
+    {
+      "name": "Markdown",
+      "total_seconds": 15686.371107,
+      "percent": 20.321540977544696,
+      "text": "4 hrs 21 mins 26 secs"
+    },
+    {
+      "name": "Other",
+      "total_seconds": 14552.659355,
+      "percent": 18.852828445637872,
+      "text": "4 hrs 2 mins 33 secs"
+    },
+    {
+      "name": "JavaScript",
+      "total_seconds": 5378.058,
+      "percent": 6.96722175454854,
+      "text": "1 hrs 29 mins 38 secs"
+    },
+    {
+      "name": "Git Config",
+      "total_seconds": 3585.567,
+      "percent": 4.645067123632981,
+      "text": "59 mins 46 secs"
+    },
+    {
+      "name": "Rust",
+      "total_seconds": 3411.557,
+      "percent": 4.419638863560481,
+      "text": "56 mins 52 secs"
+    },
+    {
+      "name": "JSON",
+      "total_seconds": 2368.361,
+      "percent": 3.0681886067097706,
+      "text": "39 mins 28 secs"
+    },
+    {
+      "name": "Mermaid",
+      "total_seconds": 1430.664,
+      "percent": 1.8534112767562998,
+      "text": "23 mins 51 secs"
+    },
+    {
+      "name": "Bash",
+      "total_seconds": 1377.618,
+      "percent": 1.7846907004457093,
+      "text": "22 mins 58 secs"
+    },
+    {
+      "name": "HTML",
+      "total_seconds": 707.445,
+      "percent": 0.9164881067007074,
+      "text": "11 mins 47 secs"
+    },
+    {
+      "name": "TOML",
+      "total_seconds": 591.691,
+      "percent": 0.7665299271912985,
+      "text": "9 mins 52 secs"
+    },
+    {
+      "name": "JSONiq",
+      "total_seconds": 371.797,
+      "percent": 0.4816593920474424,
+      "text": "6 mins 12 secs"
+    },
+    {
+      "name": "Text",
+      "total_seconds": 313.953,
+      "percent": 0.4067230534713046,
+      "text": "5 mins 14 secs"
+    },
+    {
+      "name": "SSH Config",
+      "total_seconds": 277.646,
+      "percent": 0.3596876886161109,
+      "text": "4 mins 38 secs"
+    },
+    {
+      "name": "TypeScript",
+      "total_seconds": 243.424,
+      "percent": 0.31535342095217717,
+      "text": "4 mins 3 secs"
+    },
+    {
+      "name": "YAML",
+      "total_seconds": 101.900274,
+      "percent": 0.1320108124172809,
+      "text": "1 mins 42 secs"
+    },
+    {
+      "name": "CSV",
+      "total_seconds": 69.262,
+      "percent": 0.08972824636021795,
+      "text": "1 mins 9 secs"
+    },
+    {
+      "name": "Checksums",
+      "total_seconds": 0.001,
+      "percent": 1.2954902595971521e-06,
+      "text": "0 secs"
+    },
+    {
+      "name": "INI",
+      "total_seconds": 0.0,
+      "percent": 0.0,
+      "text": "0 secs"
+    },
+    {
+      "name": "Image (svg)",
+      "total_seconds": 0.0,
+      "percent": 0.0,
+      "text": "0 secs"
+    },
+    {
+      "name": "TSConfig",
+      "total_seconds": 0.0,
+      "percent": 0.0,
+      "text": "0 secs"
+    },
+    {
+      "name": "XML",
+      "total_seconds": 0.0,
+      "percent": 0.0,
+      "text": "0 secs"
+    }
+  ],
+  "editors": [
+    {
+      "name": "Codex Vscode",
+      "total_seconds": 60931.410263,
+      "percent": 78.93604849923445,
+      "text": "16 hrs 55 mins 31 secs"
+    },
+    {
+      "name": "Antigravity CLI",
+      "total_seconds": 8237.396155,
+      "percent": 10.671466483245533,
+      "text": "2 hrs 17 mins 17 secs"
+    },
+    {
+      "name": "DeepSeekHarness",
+      "total_seconds": 5548.8636050000005,
+      "percent": 7.18849875211064,
+      "text": "1 hrs 32 mins 29 secs"
+    },
+    {
+      "name": "Codex CLI",
+      "total_seconds": 1332.481,
+      "percent": 1.7262161565982728,
+      "text": "22 mins 12 secs"
+    },
+    {
+      "name": "Codex Exec",
+      "total_seconds": 645.902,
+      "percent": 0.8367597496543198,
+      "text": "10 mins 46 secs"
+    },
+    {
+      "name": "ChatGPT",
+      "total_seconds": 494.801373,
+      "percent": 0.6410103591567973,
+      "text": "8 mins 15 secs"
+    }
+  ],
+  "operating_systems": [
+    {
+      "name": "Mac",
+      "total_seconds": 77190.854396,
+      "percent": 100.0,
+      "text": "21 hrs 26 mins 31 secs"
+    }
+  ]
 }
