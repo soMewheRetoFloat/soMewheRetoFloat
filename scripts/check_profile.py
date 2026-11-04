@@ -41,13 +41,13 @@ def main():
     if "schedule" not in workflow["on"] or "workflow_dispatch" not in workflow["on"]:
         raise ValueError("The workflow must support scheduled and manual updates")
     snapshot = ROOT / "data/wakatime.json"
-    if snapshot.is_file() and not args.structure_only:
+    if not args.structure_only:
+        if not snapshot.is_file():
+            raise ValueError("WakaTime validation requires a fetched statistics snapshot")
         data = json.loads(snapshot.read_text(encoding="utf-8"))
         if replace_section(readme, render_stats(data)) != readme:
             raise ValueError("README statistics do not match the WakaTime snapshot")
         print("WakaTime snapshot and displayed statistics verified")
-    elif not snapshot.is_file():
-        print("WakaTime connection is pending; no account statistics have been fetched")
     print("Profile Markdown, images, section structure and workflow configuration verified")
 
 

@@ -3,7 +3,8 @@ import html
 import json
 import math
 import os
-from datetime import datetime
+from collections import defaultdict
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -11,7 +12,7 @@ import requests
 
 
 ROOT = Path(__file__).resolve().parents[1]
-API_URL = "https://api.wakatime.com/api/v1/users/current/stats/last_7_days"
+API_URL = "https://api.wakatime.com/api/v1/users/current/summaries"
 START_MARKER = "<!-- WAKATIME:START -->"
 END_MARKER = "<!-- WAKATIME:END -->"
 GROUPS = (
@@ -21,12 +22,88 @@ GROUPS = (
 )
 
 
+def validate_seconds(value):
+    if type(value) not in (int, float) or not math.isfinite(value) or value < 0:
+        raise ValueError("WakaTime durations must be finite nonnegative numbers")
+
+
+def format_duration(seconds):
+    validate_seconds(seconds)
+    hours, remainder = divmod(round(seconds), 3600)
+    minutes, remaining_seconds = divmod(remainder, 60)
+    if hours:
+        return f"{hours} hrs {minutes} mins {remaining_seconds} secs"
+    if minutes:
+        return f"{minutes} mins {remaining_seconds} secs"
+    return f"{remaining_seconds} secs"
+
+
+def normalize_summaries(payload, fetched_at):
+    days = payload["data"]
+    if len(days) != 7:
+        raise ValueError("WakaTime must return exactly seven daily summaries")
+    timezones = {day["range"]["timezone"] for day in days}
+    if len(timezones) != 1:
+        raise ValueError("WakaTime daily summaries must use the same timezone")
+    timezone_name = timezones.pop()
+    local_timezone = ZoneInfo(timezone_name)
+    daily_totals = []
+    for day in days:
+        current_date = date.fromisoformat(day["range"]["date"])
+        start = datetime.fromisoformat(day["range"]["start"])
+        end = datetime.fromisoformat(day["range"]["end"])
+        if start.tzinfo is None or end.tzinfo is None or start >= end:
+            raise ValueError("WakaTime returned an invalid daily time range")
+        if start.astimezone(local_timezone).date() != current_date or end.astimezone(local_timezone).date() != current_date:
+            raise ValueError("WakaTime summary date differs from its time range")
+        seconds = day["grand_total"]["total_seconds"]
+        validate_seconds(seconds)
+        daily_totals.append({"date": current_date.isoformat(), "total_seconds": seconds})
+    total = payload["cumulative_total"]["seconds"]
+    validate_seconds(total)
+    result = {
+        "range": "last_7_days_including_today",
+        "start": payload["start"],
+        "end": payload["end"],
+        "timezone": timezone_name,
+        "is_including_today": True,
+        "fetched_at": fetched_at.isoformat(),
+        "total_seconds_including_other_language": total,
+        "human_readable_total_including_other_language": format_duration(total),
+        "daily_totals": daily_totals,
+    }
+    for key, _, _ in GROUPS:
+        durations = defaultdict(list)
+        for day in days:
+            for item in day[key]:
+                name = item["name"]
+                if not isinstance(name, str) or not name.strip():
+                    raise ValueError(f"WakaTime returned an invalid {key} name")
+                seconds = item["total_seconds"]
+                validate_seconds(seconds)
+                durations[name].append(seconds)
+        accumulated = {name: math.fsum(values) for name, values in durations.items()}
+        group_total = math.fsum(accumulated.values())
+        result[key] = [
+            {
+                "name": name,
+                "total_seconds": seconds,
+                "percent": seconds / group_total * 100 if group_total else 0.0,
+                "text": format_duration(seconds),
+            }
+            for name, seconds in sorted(accumulated.items(), key=lambda item: (-item[1], item[0]))
+        ]
+    validate_stats(result)
+    return result
+
+
 def fetch_stats():
     token = os.environ["WAKATIME_TOKEN"].strip()
     if not token:
         raise ValueError("WAKATIME_TOKEN must contain a personal OAuth token")
     response = requests.get(
         API_URL,
+        params={"range": "Last 7 Days"},
         headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
         timeout=(10, 60),
     )
@@ -36,43 +113,57 @@ def fetch_stats():
     payload = response.json()
     if payload.get("error") or payload.get("errors"):
         raise RuntimeError("WakaTime returned an API error")
-    data = payload["data"]
-    if data["is_up_to_date"] is not True:
-        raise RuntimeError("WakaTime is still calculating the current statistics")
-    result = {key: data[key] for key in (
-        "range", "start", "end", "timezone", "is_including_today",
-        "total_seconds_including_other_language", "human_readable_total_including_other_language",
-    )}
-    for key, _, _ in GROUPS:
-        result[key] = [{field: item[field] for field in ("name", "total_seconds", "percent", "text")} for item in data[key]]
-    return result
+    return normalize_summaries(payload, datetime.now(timezone.utc))
 
 
 def validate_stats(data):
-    if data["range"] != "last_7_days":
-        raise ValueError("WakaTime must return the requested last_7_days range")
+    if data["range"] != "last_7_days_including_today":
+        raise ValueError("WakaTime must cover the last seven days including today")
     start = datetime.fromisoformat(data["start"])
     end = datetime.fromisoformat(data["end"])
     if start.tzinfo is None or end.tzinfo is None or start >= end:
         raise ValueError("WakaTime returned an invalid time range")
-    ZoneInfo(data["timezone"])
+    local_timezone = ZoneInfo(data["timezone"])
+    fetched_at = datetime.fromisoformat(data["fetched_at"])
+    if fetched_at.tzinfo is None or fetched_at.utcoffset() != timedelta(0):
+        raise ValueError("The WakaTime fetch timestamp must use UTC")
+    first_date = start.astimezone(local_timezone).date()
+    last_date = end.astimezone(local_timezone).date()
+    if (last_date - first_date).days != 6 or last_date != fetched_at.astimezone(local_timezone).date():
+        raise ValueError("WakaTime must return seven dates ending on the fetch date")
+    if not start <= fetched_at < end + timedelta(seconds=1):
+        raise ValueError("The WakaTime fetch timestamp must belong to the reported period")
+    expected_dates = [(first_date + timedelta(days=offset)).isoformat() for offset in range(7)]
+    if [day["date"] for day in data["daily_totals"]] != expected_dates:
+        raise ValueError("WakaTime daily summaries must contain seven consecutive dates")
+    for day in data["daily_totals"]:
+        validate_seconds(day["total_seconds"])
     total = data["total_seconds_including_other_language"]
-    if not math.isfinite(total) or total < 0:
-        raise ValueError("WakaTime returned an invalid total duration")
-    if type(data["is_including_today"]) is not bool:
-        raise ValueError("WakaTime must identify whether the range includes today")
+    validate_seconds(total)
+    # 保留 API 小数秒，允许总计与每日数值的十毫秒序列化误差。
+    if not math.isclose(math.fsum(day["total_seconds"] for day in data["daily_totals"]), total, rel_tol=0, abs_tol=0.01):
+        raise ValueError("WakaTime cumulative duration differs from daily totals")
+    if data["human_readable_total_including_other_language"] != format_duration(total):
+        raise ValueError("The WakaTime total duration text must match its numeric value")
+    if data["is_including_today"] is not True:
+        raise ValueError("The WakaTime period must include the fetch date")
     for key, _, _ in GROUPS:
         names = set()
+        group_total = math.fsum(item["total_seconds"] for item in data[key])
         for item in data[key]:
             if not isinstance(item["name"], str) or not item["name"].strip() or item["name"] in names:
                 raise ValueError(f"WakaTime returned an invalid or repeated {key} name")
             names.add(item["name"])
             seconds = item["total_seconds"]
             percent = item["percent"]
-            if not math.isfinite(seconds) or seconds < 0 or not math.isfinite(percent) or not 0 <= percent <= 100:
+            validate_seconds(seconds)
+            if type(percent) not in (int, float) or not math.isfinite(percent) or not 0 <= percent <= 100:
                 raise ValueError(f"WakaTime returned invalid {key} statistics")
-            if not isinstance(item["text"], str):
-                raise ValueError("WakaTime must provide a formatted duration")
+            expected_percent = seconds / group_total * 100 if group_total else 0.0
+            if not math.isclose(percent, expected_percent, rel_tol=0, abs_tol=0.000001):
+                raise ValueError(f"WakaTime {key} percentages must match aggregated durations")
+            if item["text"] != format_duration(seconds):
+                raise ValueError("WakaTime duration text must match its numeric value")
 
 
 def escape_cell(value):
@@ -81,10 +172,11 @@ def escape_cell(value):
 
 def render_stats(data):
     validate_stats(data)
-    timezone = ZoneInfo(data["timezone"])
-    start = datetime.fromisoformat(data["start"]).astimezone(timezone).date().isoformat()
-    end = datetime.fromisoformat(data["end"]).astimezone(timezone).date().isoformat()
-    lines = ["**This Week I Spent My Time On**", "", f"🕑 Time Zone: {escape_cell(data['timezone'])}", ""]
+    local_timezone = ZoneInfo(data["timezone"])
+    start = datetime.fromisoformat(data["start"]).astimezone(local_timezone).date().isoformat()
+    end = datetime.fromisoformat(data["end"]).astimezone(local_timezone).date().isoformat()
+    fetched_at = datetime.fromisoformat(data["fetched_at"]).astimezone(local_timezone).strftime("%Y-%m-%d %H:%M")
+    lines = ["**Last 7 Days, Including Today**", "", f"🕑 Time Zone: {escape_cell(data['timezone'])}", ""]
     for key, title, limit in GROUPS:
         lines.extend([f"**{title}**", ""])
         rows = sorted(data[key], key=lambda item: (-item["total_seconds"], item["name"]))[:limit]
@@ -94,7 +186,13 @@ def render_stats(data):
         else:
             lines.append("No activity recorded in this period.")
         lines.append("")
-    lines.extend([f"Range: {start} → {end}  ", f"Last 7 days total: {escape_cell(data['human_readable_total_including_other_language'])}"])
+    lines.extend([
+        f"Range: {start} → {end}",
+        "",
+        f"Last 7 days total: {escape_cell(data['human_readable_total_including_other_language'])}",
+        "",
+        f"Last synced: {fetched_at} {escape_cell(data['timezone'])}",
+    ])
     return "\n".join(lines)
 
 

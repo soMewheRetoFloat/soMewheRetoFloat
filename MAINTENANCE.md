@@ -9,12 +9,18 @@
 - README 中 `WAKATIME:START` 与 `WAKATIME:END` 之间的内容由程序更新。
 - `scripts/check_profile.py` 检查 Markdown、图片引用、栏目、工作流与已获取的数据。
 
-语言和编辑器各显示用时最多的五项，操作系统显示前三项。用时及百分比采用 WakaTime 返回值。起止日期按照 API 返回的时区显示，总用时包含 `Other`。
+语言和编辑器各显示用时最多的五项，操作系统显示前三项。使用 Summaries API 的 `Last 7 Days` 范围，包含今天。每类活动按名称汇总秒数，再计算该类别中的时间占比。起止日期按照 API 返回的时区显示，总用时包含 `Other`，页面记录最近同步时间。
+
+## Tech Stack
+
+`assets/tech-stack/panel.svg` 使用统一的深色背板，保存全部图标和动画。Python、JavaScript、TypeScript、React 和 C++ 使用动态 SVG，其余技术使用静态图标。每项技术显示一次。
+
+原始素材位于 `assets/tech-stack/sources/`，使用 `scripts/build_tech_stack.py` 生成面板。SVG 通过 XML 和 CSS 库组合，动画标识和样式各自限定作用范围。生成结果可以独立显示。
 
 ## 连接账号
 
 1. 安装 WakaTime for Mac 或实际使用的编辑器插件，在应用中配置本人的 WakaTime API Key。
-2. 在 WakaTime 的个人 OAuth 页面创建具有 `read_stats` 权限的 token。
+2. 在 WakaTime 的个人 OAuth 页面创建具有 `read_summaries` 权限的 token。
 3. 打开本仓库的 `Settings → Secrets and variables → Actions → New repository secret`，名称填写 `WAKATIME_TOKEN`，值填写该 OAuth token。
 4. 在 `Actions → Update WakaTime Profile → Run workflow` 运行一次。
 
@@ -32,6 +38,7 @@ GitHub 自带的 `GITHUB_TOKEN` 使用 `contents: write` 权限提交 README 和
 
 ```sh
 python -m pip install -r requirements.txt
+python scripts/build_tech_stack.py
 python scripts/update_wakatime.py
 python scripts/check_profile.py
 ```

@@ -13,6 +13,7 @@ on:
       - "scripts/**"
       - "requirements.txt"
       - "README.md"
+      - "assets/tech-stack/**"
 
 permissions:
   contents: write
@@ -39,6 +40,9 @@ jobs:
 
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
+
+      - name: Build Tech Stack panel
+        run: python scripts/build_tech_stack.py
 
       - name: Validate profile
         run: python scripts/check_profile.py --structure-only
@@ -68,7 +72,7 @@ jobs:
       - name: Commit WakaTime statistics
         if: steps.connection.outputs.configured == 'true'
         run: |
-          git add -- README.md data/wakatime.json
+          git add -- README.md data/wakatime.json assets/tech-stack/panel.svg
           if git diff --cached --quiet; then
             echo "WakaTime statistics are unchanged."
             exit 0
