@@ -3,7 +3,7 @@
 # Zihang Zhan · Fl0at9973
 
 <p>Hi there 👋 · 你好呀 🌩🐒🦆 · Здравствуйте 🍞 · こんにちは！🐕</p>
-<p>Computer Science and Technology · Embodied Intelligence</p>
+<p>Build broadens · Curve matters</p>
 
 <p>
   <a href="https://github.com/soMewheRetoFloat">GitHub</a> ·
