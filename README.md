@@ -30,33 +30,33 @@
 
 | Name | Time | Share |
 | --- | ---: | ---: |
-| Other | 8 hrs 21 mins 53 secs | 34.75% |
-| Python | 6 hrs 2 mins 1 secs | 25.06% |
-| Markdown | 4 hrs 39 mins 39 secs | 19.36% |
-| JavaScript | 1 hrs 3 mins 35 secs | 4.40% |
-| Rust | 56 mins 52 secs | 3.94% |
+| Other | 14 hrs 39 mins 7 secs | 49.69% |
+| Python | 5 hrs 31 mins 52 secs | 18.76% |
+| Markdown | 4 hrs 36 mins 31 secs | 15.63% |
+| JavaScript | 1 hrs 8 mins 43 secs | 3.88% |
+| Rust | 56 mins 52 secs | 3.21% |
 
 **🔥 Editors**
 
 | Name | Time | Share |
 | --- | ---: | ---: |
-| Codex Vscode | 15 hrs 38 mins 10 secs | 64.95% |
-| Antigravity CLI | 4 hrs 54 mins 8 secs | 20.36% |
-| DeepSeekHarness | 2 hrs 27 mins 20 secs | 10.20% |
-| ChatGPT | 24 mins 48 secs | 1.72% |
-| Codex CLI | 22 mins 12 secs | 1.54% |
+| Codex Vscode | 14 hrs 29 mins 47 secs | 49.16% |
+| Antigravity CLI | 7 hrs 52 mins 33 secs | 26.71% |
+| DeepSeekHarness | 4 hrs 16 mins 48 secs | 14.51% |
+| ChatGPT | 57 mins 13 secs | 3.23% |
+| Claude Code | 37 mins 6 secs | 2.10% |
 
 **💻 Operating Systems**
 
 | Name | Time | Share |
 | --- | ---: | ---: |
-| Mac | 24 hrs 4 mins 26 secs | 100.00% |
+| Mac | 29 hrs 29 mins 21 secs | 100.00% |
 
-Range: 2026-10-30 → 2026-11-05
+Range: 2026-10-31 → 2026-11-06
 
-Last 7 days total: 24 hrs 4 mins 26 secs
+Last 7 days total: 29 hrs 29 mins 21 secs
 
-Last synced: 2026-11-05 08:39 Asia/Tokyo
+Last synced: 2026-11-06 08:38 Asia/Tokyo
 <!-- WAKATIME:END -->
 
 ### 🧰 Tech Stack
