@@ -1,17 +1,13 @@
 {
   "range": "last_7_days_including_today",
-  "start": "2026-11-01T15:00:00Z",
-  "end": "2026-11-08T14:59:59Z",
+  "start": "2026-11-02T15:00:00Z",
+  "end": "2026-11-09T14:59:59Z",
   "timezone": "Asia/Tokyo",
   "is_including_today": true,
-  "fetched_at": "2026-11-07T21:49:48.054215+00:00",
-  "total_seconds_including_other_language": 122604.141476,
-  "human_readable_total_including_other_language": "34 hrs 3 mins 24 secs",
+  "fetched_at": "2026-11-08T22:04:33.199339+00:00",
+  "total_seconds_including_other_language": 126070.149292,
+  "human_readable_total_including_other_language": "35 hrs 1 mins 10 secs",
   "daily_totals": [
-    {
-      "date": "2026-11-02",
-      "total_seconds": 5899.789
-    },
     {
       "date": "2026-11-03",
       "total_seconds": 13098.821155
@@ -34,98 +30,90 @@
     },
     {
       "date": "2026-11-08",
-      "total_seconds": 5542.726
+      "total_seconds": 13391.522816
+    },
+    {
+      "date": "2026-11-09",
+      "total_seconds": 1517.0
     }
   ],
   "languages": [
     {
       "name": "Other",
-      "total_seconds": 75322.798061,
-      "percent": 61.43576974986982,
-      "text": "20 hrs 55 mins 23 secs"
+      "total_seconds": 82823.87599100001,
+      "percent": 65.69665892848732,
+      "text": "23 hrs 0 mins 24 secs"
     },
     {
       "name": "Python",
-      "total_seconds": 21413.018708,
-      "percent": 17.4651675304065,
-      "text": "5 hrs 56 mins 53 secs"
+      "total_seconds": 17779.084708,
+      "percent": 14.102533238713475,
+      "text": "4 hrs 56 mins 19 secs"
     },
     {
       "name": "Markdown",
-      "total_seconds": 11261.211429,
-      "percent": 9.185017156377548,
-      "text": "3 hrs 7 mins 41 secs"
+      "total_seconds": 12760.884315000001,
+      "percent": 10.122050609651943,
+      "text": "3 hrs 32 mins 41 secs"
     },
     {
       "name": "Git Config",
-      "total_seconds": 4935.935687,
-      "percent": 4.02591268743252,
-      "text": "1 hrs 22 mins 16 secs"
+      "total_seconds": 3547.332687,
+      "percent": 2.8137768590911807,
+      "text": "59 mins 7 secs"
     },
     {
       "name": "Bash",
       "total_seconds": 3158.715685,
-      "percent": 2.576353169618112,
+      "percent": 2.505522284806592,
       "text": "52 mins 39 secs"
     },
     {
       "name": "Mermaid",
       "total_seconds": 1430.664,
-      "percent": 1.1668969602303811,
+      "percent": 1.1348158212189767,
       "text": "23 mins 51 secs"
-    },
-    {
-      "name": "JavaScript",
-      "total_seconds": 1301.678,
-      "percent": 1.0616917049696941,
-      "text": "21 mins 42 secs"
     },
     {
       "name": "C++",
       "total_seconds": 985.099,
-      "percent": 0.8034793834373329,
+      "percent": 0.7813895720217975,
       "text": "16 mins 25 secs"
+    },
+    {
+      "name": "JavaScript",
+      "total_seconds": 911.6170000000001,
+      "percent": 0.7231029749068825,
+      "text": "15 mins 12 secs"
     },
     {
       "name": "Text",
       "total_seconds": 884.1220000000001,
-      "percent": 0.721119196591796,
+      "percent": 0.7012936884465985,
       "text": "14 mins 44 secs"
     },
     {
       "name": "JSON",
       "total_seconds": 873.3921869999999,
-      "percent": 0.7123676056008013,
+      "percent": 0.6927827022533894,
       "text": "14 mins 33 secs"
     },
     {
       "name": "HTML",
       "total_seconds": 765.751445,
-      "percent": 0.6245722499919771,
+      "percent": 0.607401077337022,
       "text": "12 mins 46 secs"
     },
     {
       "name": "YAML",
       "total_seconds": 101.900274,
-      "percent": 0.08311323971054206,
+      "percent": 0.08082823298954105,
       "text": "1 mins 42 secs"
-    },
-    {
-      "name": "CSV",
-      "total_seconds": 69.262,
-      "percent": 0.05649238204042086,
-      "text": "1 mins 9 secs"
-    },
-    {
-      "name": "Rust",
-      "total_seconds": 52.883,
-      "percent": 0.04313312695913454,
-      "text": "53 secs"
     },
     {
       "name": "INI",
       "total_seconds": 47.71,
-      "percent": 0.03891385676342698,
+      "percent": 0.03784401007529188,
       "text": "48 secs"
     },
     {
@@ -137,78 +125,78 @@
   ],
   "editors": [
     {
-      "name": "Codex Vscode",
-      "total_seconds": 35536.364027,
-      "percent": 28.98463591783016,
-      "text": "9 hrs 52 mins 16 secs"
+      "name": "Antigravity CLI",
+      "total_seconds": 34825.75587,
+      "percent": 27.624109327686764,
+      "text": "9 hrs 40 mins 26 secs"
     },
     {
-      "name": "Antigravity CLI",
-      "total_seconds": 33308.75587,
-      "percent": 27.167724898200323,
-      "text": "9 hrs 15 mins 9 secs"
+      "name": "Codex Vscode",
+      "total_seconds": 31068.022027,
+      "percent": 24.64344033974383,
+      "text": "8 hrs 37 mins 48 secs"
     },
     {
       "name": "ChatGPT",
-      "total_seconds": 16989.740522,
-      "percent": 13.857395286541585,
-      "text": "4 hrs 43 mins 10 secs"
+      "total_seconds": 18858.426815,
+      "percent": 14.958677308551971,
+      "text": "5 hrs 14 mins 18 secs"
     },
     {
       "name": "DeepSeekHarness",
-      "total_seconds": 15535.331253,
-      "percent": 12.671130898168778,
-      "text": "4 hrs 18 mins 55 secs"
+      "total_seconds": 14975.861995,
+      "percent": 11.878991243449189,
+      "text": "4 hrs 9 mins 36 secs"
     },
     {
       "name": "Claude Code",
-      "total_seconds": 10911.996724999999,
-      "percent": 8.900186073352215,
-      "text": "3 hrs 1 mins 52 secs"
+      "total_seconds": 13954.163396,
+      "percent": 11.068570533441484,
+      "text": "3 hrs 52 mins 34 secs"
     },
     {
       "name": "Codex Exec",
       "total_seconds": 3833.621222,
-      "percent": 3.126828487070674,
+      "percent": 3.040863553766942,
       "text": "1 hrs 3 mins 54 secs"
     },
     {
       "name": "VS Code",
-      "total_seconds": 2441.203504,
-      "percent": 1.9911264616439324,
-      "text": "40 mins 41 secs"
+      "total_seconds": 3219.602504,
+      "percent": 2.553818268702808,
+      "text": "53 mins 40 secs"
     },
     {
       "name": "Codex CLI",
-      "total_seconds": 1492.395432,
-      "percent": 1.217247161501587,
-      "text": "24 mins 52 secs"
+      "total_seconds": 1496.8614320000001,
+      "percent": 1.1873242321090725,
+      "text": "24 mins 57 secs"
     },
     {
       "name": "Xcode",
       "total_seconds": 1490.199921,
-      "percent": 1.2154564299866732,
+      "percent": 1.1820402604175888,
       "text": "24 mins 50 secs"
     },
     {
       "name": "Notes",
-      "total_seconds": 677.33,
-      "percent": 0.5524527898044852,
-      "text": "11 mins 17 secs"
+      "total_seconds": 1325.43111,
+      "percent": 1.051344126618011,
+      "text": "22 mins 5 secs"
     },
     {
       "name": "Antigravity",
-      "total_seconds": 387.203,
-      "percent": 0.31581559589958524,
-      "text": "6 mins 27 secs"
+      "total_seconds": 1022.203,
+      "percent": 0.8108208055123368,
+      "text": "17 mins 2 secs"
     }
   ],
   "operating_systems": [
     {
       "name": "Mac",
-      "total_seconds": 122604.141476,
+      "total_seconds": 126070.149292,
       "percent": 100.0,
-      "text": "34 hrs 3 mins 24 secs"
+      "text": "35 hrs 1 mins 10 secs"
     }
   ]
 }
